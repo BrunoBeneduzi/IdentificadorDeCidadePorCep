@@ -9,8 +9,6 @@ import main.service.CepVerificador;
 public class Main {
 
 	public static void main(String[] args) {
-		VerificaMemoria verificadorDeMemoria = new VerificaMemoria();
-		
 		ArquivoLeitor arquivoLeitor = new ArquivoLeitor();//faz a leitura do arquivo 1 vez
 		ArquivoFormataCep cep = new ArquivoFormataCep();//faz a formatação do arquivo
 		CepVerificador verifica = new CepVerificador();//faz a verificação de qual cidade pertence o cep
@@ -22,7 +20,7 @@ public class Main {
 		
 		System.out.println("O cep buscado -> " + cep.getCepBuscado() + " Pertence a cidade:  " + c.getCidade() );
 		System.out.println("-----------------------------------------------");
-		verificadorDeMemoria.verificaMemoria();
+	
 	}
 
 }
@@ -41,4 +39,5 @@ public class Main {
  *	Etapa 4: ele verifica se existem duas cidades cadastradas, se tiver, ele envia para um método que verifica 
  *	o intervalo dos ceps com o cep e devolve a cidade correta.
  */
+
 
