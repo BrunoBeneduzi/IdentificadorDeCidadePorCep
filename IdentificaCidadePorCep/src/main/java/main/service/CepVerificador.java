@@ -83,7 +83,7 @@ public class CepVerificador {
 			if(cepBuscado >= cidade.get(cidade.size()/2).getCepInicial() && cepBuscado <= cidade.get(cidade.size()/2).getCepFinal() ) {
 				return cidade.get(cidade.size()/2);
 			}
-		}else {//caso tenho mais de duas cidades,digamos A,B,C a lista teria o tamanho de 3
+		}else {//caso tenho mais de duas cidades,digamos A,B,C a lista teria o tamanho de 3, e o objetivo é pegar o cep inicial da ultima cidade que está nessa lista
 			if(cepBuscado >= cidade.get(cidade.size()/2 + 1).getCepInicial() && cepBuscado <= cidade.get(cidade.size()/2 + 1).getCepFinal() ) {
 				return cidade.get(cidade.size()/2 + 1);
 			}
@@ -93,3 +93,4 @@ public class CepVerificador {
 	}
 
 }
+
