@@ -65,6 +65,11 @@ public class CepVerificador {
 		
 		for(int i = 0; i < cidade.size() - 1; i++) {
 			
+			/*
+			aqui ele pega o cep buscado, digamos 350 e verifica se o cep inicial da cidade que foi encontrado é maior ou igual a 350, e se 
+			a outra cidade tem o cep menor que 350, assim verificando se o cep buscado pertence a uma das cidades iniciais
+			
+			*/
 			if(cepBuscado >= cidade.get(i).getCepInicial() && cepBuscado < cidade.get(i+1).getCepInicial()) {
 				return cidade.get(i);
 			}
@@ -86,4 +91,5 @@ public class CepVerificador {
 	
 		return null;
 	}
+
 }
